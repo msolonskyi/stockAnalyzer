@@ -1,35 +1,29 @@
 ﻿insert into DIMENTIONS (id, name, short_name)
-values (513, 'тысяч кВт', 'тыс. кВт');
+values (34, 'PLN', 'PLN');
 insert into DIMENTIONS (id, name, short_name)
-values (514, 'тысяч USD', 'тыс. USD');
+values (21, 'UAH', 'UAH');
 insert into DIMENTIONS (id, name, short_name)
-values (517, ' ', ' ');
+values (22, 'USD', 'USD');
 insert into DIMENTIONS (id, name, short_name)
-values (515, 'тысяч RUR', 'тыс. RUR');
+values (23, 'EURO', 'EURO');
 insert into DIMENTIONS (id, name, short_name)
-values (516, 'тысяч EURO', 'тыс. EURO');
+values (24, 'RUR', 'RUR');
 insert into DIMENTIONS (id, name, short_name)
-values (501, 'гривны', 'грн');
+values (25, '%', '%');
 insert into DIMENTIONS (id, name, short_name)
-values (502, 'тысяч ГигаКал', 'тыс. Гкал');
+values (26, '-', '-');
 insert into DIMENTIONS (id, name, short_name)
-values (503, 'секции', 'секции');
+values (27, 'Tons', 't');
 insert into DIMENTIONS (id, name, short_name)
-values (504, 'шт', 'шт');
+values (28, 'Watt', 'W');
 insert into DIMENTIONS (id, name, short_name)
-values (505, 'тысяч грн', 'тыс. грн');
+values (29, 'pcs', 'pcs');
 insert into DIMENTIONS (id, name, short_name)
-values (506, 'миллион кубических метров', 'млн. м куб');
+values (30, 'Cubic meters', 'CM');
 insert into DIMENTIONS (id, name, short_name)
-values (518, 'гривен на акцию', 'грн/акция');
+values (31, 'Person', 'pers');
 insert into DIMENTIONS (id, name, short_name)
-values (508, 'миллион кВт/ч', 'млн. кВт/ч');
+values (32, 'kW/h', 'kW/h');
 insert into DIMENTIONS (id, name, short_name)
-values (509, 'составы', 'составы');
-insert into DIMENTIONS (id, name, short_name)
-values (510, 'человек', 'чел');
-insert into DIMENTIONS (id, name, short_name)
-values (511, 'тонн', 'т');
-insert into DIMENTIONS (id, name, short_name)
-values (519, '%', '%');
+values (33, 'GCal', 'GCal');
 commit;

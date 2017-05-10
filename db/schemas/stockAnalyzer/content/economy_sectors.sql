@@ -1,47 +1,51 @@
-﻿insert into ECONOMY_SECTORS (id, name, owner_id)
-values (101, 'Металлургия', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (102, 'Сельсхое хозяйство', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (103, 'Машиностроение', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (104, 'Нефтегазовая промышоенность', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (105, 'Телекоммуникации', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (106, 'Химическая промышленность', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (107, 'Энергетика', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (108, 'Финансы', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (109, 'Банковское дело', 108);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (110, 'Страхование', 108);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (111, 'Производство кокса', 106);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (112, 'Энергогенерация', 107);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (113, 'Энергораспределение', 107);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (114, 'Автомобилестроение', 103);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (115, 'Вагоностроение', 103);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (116, 'Производство локомотивов', 103);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (117, 'Горнодобывающая промышлонность', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (118, 'Трубная прмышленность', 101);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (119, 'Фармацевтическая отрасль', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (120, 'Добыча железной руды', 117);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (121, 'Добыча угля', 117);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (122, 'Транспортные услуги', 100);
-insert into ECONOMY_SECTORS (id, name, owner_id)
-values (100, 'Все отрасли', null);
+﻿insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (123, 'Clothes & Cosmetics', 100, 'Одежда и косметика');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (124, 'IT', 100, 'IT');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (100, 'All industries', null, 'Все отрасли');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (101, 'Metallurgy', 100, 'Металлургия');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (102, 'Agriculture', 100, 'Сельсхое хозяйство');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (103, 'Mechanical Engineering', 100, 'Машиностроение');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (104, 'Oil and gas industry', 100, 'Нефтегазовая промышоенность');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (105, 'Telecommunications', 100, 'Телекоммуникации');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (106, 'Chemical Industry', 100, 'Химическая промышленность');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (107, 'Energetics', 100, 'Энергетика');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (108, 'Finances', 100, 'Финансы');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (109, 'Banking', 108, 'Банковское дело');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (110, 'Insurance', 108, 'Страхование');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (111, 'Manufacture of coke', 106, 'Производство кокса');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (112, 'Power generation', 107, 'Энергогенерация');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (113, 'Energy distribution', 107, 'Энергораспределение');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (114, 'Automobile production', 103, 'Автомобилестроение');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (115, 'Railway Cargo Engineering', 103, 'Вагоностроение');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (116, 'Production of locomotives', 103, 'Производство локомотивов');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (117, 'Mining and quarrying', 100, 'Горнодобывающая промышлонность');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (118, 'Pipe industry', 101, 'Трубная прмышленность');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (119, 'Pharmaceutical industry', 100, 'Фармацевтическая отрасль');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (120, 'Iron ore mining', 117, 'Добыча железной руды');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (121, 'Coal mining', 117, 'Добыча угля');
+insert into ECONOMY_SECTORS (id, name, owner_id, name_rus)
+values (122, 'Transportation services', 100, 'Транспортные услуги');
 commit;

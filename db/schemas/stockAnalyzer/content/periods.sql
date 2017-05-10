@@ -1,33 +1,43 @@
 ﻿insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2121, '2012Q1', 'Q', to_date('01-01-2012', 'dd-mm-yyyy'), to_date('31-03-2012 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2122, '2012Q2', 'Q', to_date('01-01-2012', 'dd-mm-yyyy'), to_date('30-06-2012 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2122, '2012Q2', 'Q', to_date('01-04-2012', 'dd-mm-yyyy'), to_date('30-06-2012 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2123, '2012Q3', 'Q', to_date('01-01-2012', 'dd-mm-yyyy'), to_date('30-09-2012 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2123, '2012Q3', 'Q', to_date('01-07-2012', 'dd-mm-yyyy'), to_date('30-09-2012 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2131, '2013Q1', 'Q', to_date('01-01-2013', 'dd-mm-yyyy'), to_date('31-03-2013 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2132, '2013Q2', 'Q', to_date('01-01-2013', 'dd-mm-yyyy'), to_date('30-06-2013 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2132, '2013Q2', 'Q', to_date('01-04-2013', 'dd-mm-yyyy'), to_date('30-06-2013 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2133, '2013Q3', 'Q', to_date('01-01-2013', 'dd-mm-yyyy'), to_date('30-09-2013 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2133, '2013Q3', 'Q', to_date('01-07-2013', 'dd-mm-yyyy'), to_date('30-09-2013 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2141, '2014Q1', 'Q', to_date('01-01-2014', 'dd-mm-yyyy'), to_date('31-03-2014 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2142, '2014Q2', 'Q', to_date('01-01-2014', 'dd-mm-yyyy'), to_date('30-06-2014 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2142, '2014Q2', 'Q', to_date('01-04-2014', 'dd-mm-yyyy'), to_date('30-06-2014 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2143, '2014Q3', 'Q', to_date('01-01-2014', 'dd-mm-yyyy'), to_date('30-09-2014 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2143, '2014Q3', 'Q', to_date('01-07-2014', 'dd-mm-yyyy'), to_date('30-09-2014 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2151, '2015Q1', 'Q', to_date('01-01-2015', 'dd-mm-yyyy'), to_date('31-03-2015 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2152, '2015Q2', 'Q', to_date('01-01-2015', 'dd-mm-yyyy'), to_date('30-06-2015 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2152, '2015Q2', 'Q', to_date('01-04-2015', 'dd-mm-yyyy'), to_date('30-06-2015 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2153, '2015Q3', 'Q', to_date('01-01-2015', 'dd-mm-yyyy'), to_date('30-09-2015 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2153, '2015Q3', 'Q', to_date('01-07-2015', 'dd-mm-yyyy'), to_date('30-09-2015 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2161, '2016Q1', 'Q', to_date('01-01-2016', 'dd-mm-yyyy'), to_date('31-03-2016 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2162, '2016Q2', 'Q', to_date('01-01-2016', 'dd-mm-yyyy'), to_date('30-06-2016 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2162, '2016Q2', 'Q', to_date('01-04-2016', 'dd-mm-yyyy'), to_date('30-06-2016 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
-values (2163, '2016Q3', 'Q', to_date('01-01-2016', 'dd-mm-yyyy'), to_date('30-09-2016 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+values (2163, '2016Q3', 'Q', to_date('01-07-2016', 'dd-mm-yyyy'), to_date('30-09-2016 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2124, '2012Q4', 'Q', to_date('01-10-2012', 'dd-mm-yyyy'), to_date('31-12-2012 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2134, '2013Q4', 'Q', to_date('01-10-2013', 'dd-mm-yyyy'), to_date('31-12-2013 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2144, '2014Q4', 'Q', to_date('01-10-2014', 'dd-mm-yyyy'), to_date('31-12-2014 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2154, '2015Q4', 'Q', to_date('01-10-2015', 'dd-mm-yyyy'), to_date('31-12-2015 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2164, '2016Q4', 'Q', to_date('01-10-2016', 'dd-mm-yyyy'), to_date('31-12-2016 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2001, '2001', 'Y', to_date('01-01-2001', 'dd-mm-yyyy'), to_date('31-12-2001 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
@@ -74,4 +84,14 @@ insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2022, '2022', 'Y', to_date('01-01-2022', 'dd-mm-yyyy'), to_date('30-06-2022 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 insert into PERIODS (id, name, type, begin_dtm, end_dtm)
 values (2023, '2023', 'Y', to_date('01-01-2023', 'dd-mm-yyyy'), to_date('30-09-2023 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2200, 'Last Values', 'L', to_date('01-01-2200', 'dd-mm-yyyy'), to_date('01-01-2200', 'dd-mm-yyyy'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2171, '2017Q1', 'Q', to_date('01-01-2017', 'dd-mm-yyyy'), to_date('31-03-2017 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2172, '2017Q2', 'Q', to_date('01-04-2017', 'dd-mm-yyyy'), to_date('30-06-2017 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2173, '2017Q3', 'Q', to_date('01-07-2017', 'dd-mm-yyyy'), to_date('30-09-2017 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
+insert into PERIODS (id, name, type, begin_dtm, end_dtm)
+values (2174, '2017Q4', 'Q', to_date('01-10-2017', 'dd-mm-yyyy'), to_date('31-12-2017 23:59:59', 'dd-mm-yyyy hh24:mi:ss'));
 commit;

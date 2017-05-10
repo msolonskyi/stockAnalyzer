@@ -1,5 +1,5 @@
-﻿insert into INDICATOR_GROUPS (id, name)
-values (2, 'производственные мощности');
-insert into INDICATOR_GROUPS (id, name)
-values (1, 'факт');
+﻿insert into INDICATOR_GROUPS (id, name, name_rus)
+values (1, 'Actual indicators', 'факт');
+insert into INDICATOR_GROUPS (id, name, name_rus)
+values (2, 'Production capacities', 'производственные мощности');
 commit;

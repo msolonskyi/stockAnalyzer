@@ -1,5 +1,5 @@
-create or replace trigger periods_bi
-                          before insert on periods
+create or replace trigger quotations_BI
+                          before insert on quotations
                           for each row
 begin
     if :new.ID is null then
@@ -7,5 +7,5 @@ begin
         into :new.ID
         From Dual;
     end if;
-end periods_bi;
+end quotations_BI;
 /

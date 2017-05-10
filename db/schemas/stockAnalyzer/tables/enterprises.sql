@@ -4,12 +4,15 @@ create table ENTERPRISES
   ticker            VARCHAR2(10) not null,
   name              VARCHAR2(2000) not null,
   short_name        VARCHAR2(200) not null,
-  okpo              VARCHAR2(10) not null,
+  okpo              VARCHAR2(10),
   economy_sector_id NUMBER(8) not null,
   web_address       VARCHAR2(256),
   owner             VARCHAR2(256),
-  comments          VARCHAR2(1024)
+  comments          VARCHAR2(1024),
+  stock_id          NUMBER(8) not null,
+  isin              VARCHAR2(30)
 )
+tablespace DATA
   pctfree 10
   initrans 1
   maxtrans 255
@@ -28,6 +31,7 @@ comment on table ENTERPRISES
 alter table ENTERPRISES
   add constraint PK_ENTERPRISES primary key (TICKER)
   using index 
+  tablespace DATA
   pctfree 10
   initrans 2
   maxtrans 255
@@ -42,3 +46,6 @@ alter table ENTERPRISES
 alter table ENTERPRISES
   add constraint FK_ENTERPRISES$ES_ID foreign key (ECONOMY_SECTOR_ID)
   references ECONOMY_SECTORS (ID);
+alter table ENTERPRISES
+  add constraint FK_ENTERPRISES$STOCK_ID foreign key (STOCK_ID)
+  references STOCKS (ID);

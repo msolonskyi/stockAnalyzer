@@ -5,7 +5,7 @@ declare
     n number;
 begin
     :new.okpo := trim(:new.okpo);
-    :new.ticker := trim(:new.ticker);
+    :new.ticker := upper(trim(:new.ticker));
     n := to_number(:new.okpo);
 exception when others then
     raise_application_error(-20001, 'ОКПО '||:new.okpo||' содержит нецифровые символы');

@@ -1,9 +1,9 @@
 -- Create table
-create table DIMENTIONS
+create table DIMENTIONS_LINK
 (
-  id         NUMBER(8) not null,
-  name       VARCHAR2(64) not null,
-  short_name VARCHAR2(64) not null
+  id            NUMBER(8) not null,
+  dimention_id  NUMBER(8) not null,
+  multiplier_id NUMBER(8) not null
 )
   pctfree 10
   initrans 1
@@ -17,12 +17,9 @@ create table DIMENTIONS
     pctincrease 0
     buffer_pool keep
   );
--- Add comments to the table 
-comment on table DIMENTIONS
-  is 'размерности';
 -- Create/Recreate primary, unique and foreign key constraints 
-alter table DIMENTIONS
-  add constraint PK_DIMENSIONS primary key (ID)
+alter table DIMENTIONS_LINK
+  add constraint PK_DIMENTIONS_LINK primary key (ID)
   using index 
   pctfree 10
   initrans 2
@@ -35,8 +32,8 @@ alter table DIMENTIONS
     maxextents unlimited
     pctincrease 0
   );
-alter table DIMENTIONS
-  add constraint UNQ_DIMENSIONS unique (NAME)
+alter table DIMENTIONS_LINK
+  add constraint UNQ_DIMENTIONS_LINK unique (DIMENTION_ID, MULTIPLIER_ID)
   using index 
   pctfree 10
   initrans 2
@@ -49,3 +46,9 @@ alter table DIMENTIONS
     maxextents unlimited
     pctincrease 0
   );
+alter table DIMENTIONS_LINK
+  add constraint FK_DIMENTIONS_LINK$DIM_ID foreign key (DIMENTION_ID)
+  references DIMENTIONS (ID);
+alter table DIMENTIONS_LINK
+  add constraint FK_DIMENTIONS_LINK$MULT_ID foreign key (MULTIPLIER_ID)
+  references MULTIPLIERS (ID);

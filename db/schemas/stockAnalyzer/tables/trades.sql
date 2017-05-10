@@ -1,13 +1,13 @@
 -- Create table
 create table TRADES
 (
-  id           NUMBER(8) not null,
-  ticker       VARCHAR2(10) not null,
-  dtm          DATE not null,
-  price        NUMBER(12,4) not null,
-  vol          NUMBER(12) not null,
-  type         CHAR(1) default 'A' not null,
-  dimention_id NUMBER(8) default 501 not null
+  id                NUMBER(8) not null,
+  ticker            VARCHAR2(10) not null,
+  dtm               DATE not null,
+  price             NUMBER(12,4) not null,
+  vol               NUMBER(12) not null,
+  type              CHAR(1) default 'A' not null,
+  dimention_link_id NUMBER(8) default 501 not null
 )
   pctfree 10
   initrans 1
@@ -61,8 +61,8 @@ alter table TRADES
     pctincrease 0
   );
 alter table TRADES
-  add constraint FK_TRADES$DIMENTION_ID foreign key (DIMENTION_ID)
-  references DIMENTIONS (ID);
+  add constraint FK_TRADES$DIMENTION_LINK_ID foreign key (DIMENTION_LINK_ID)
+  references DIMENTIONS_LINK (ID);
 alter table TRADES
   add constraint FK_TRADES$ENTERPRISES$TICKER foreign key (TICKER)
   references ENTERPRISES (TICKER);

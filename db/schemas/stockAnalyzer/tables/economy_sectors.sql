@@ -3,7 +3,8 @@ create table ECONOMY_SECTORS
 (
   id       NUMBER(8) not null,
   name     VARCHAR2(64) not null,
-  owner_id NUMBER(8)
+  owner_id NUMBER(8),
+  name_rus VARCHAR2(128) not null
 )
   pctfree 10
   initrans 1
@@ -31,3 +32,6 @@ alter table ECONOMY_SECTORS
     maxextents unlimited
     pctincrease 0
   );
+alter table ECONOMY_SECTORS
+  add constraint FK_ECONOMY_SECTORS$OWNER_ID foreign key (OWNER_ID)
+  references ECONOMY_SECTORS (ID);

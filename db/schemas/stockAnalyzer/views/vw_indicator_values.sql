@@ -7,20 +7,24 @@ select indicator_values.id,
        periods.type as period_type,
        periods.begin_dtm as period_begin_dtm,
        periods.end_dtm as period_end_dtm,
-       indicator_values.indicator_group_link_id,
-       vw_indicator_group_links.indicator_group_id,
-       vw_indicator_group_links.indicator_group_name,
-       vw_indicator_group_links.indicator_id,
-       vw_indicator_group_links.indicator_name,
-       vw_indicator_group_links.indicator_priority,
-       vw_indicator_group_links.indicator_type_id,
-       vw_indicator_group_links.indicator_type_name,
-       vw_indicator_group_links.indicator_type_priority,
-       dimentions.id as dimention_id,
-       dimentions.name as dimention_name,
-       dimentions.short_name as dimention_short_name
-from indicator_values, vw_indicator_group_links, periods, enterprises, dimentions
-where indicator_values.indicator_group_link_id = vw_indicator_group_links.id
-  and indicator_values.period_id = periods.id
-  and indicator_values.ticker = enterprises.ticker
-  and indicator_values.dimention_id = dimentions.id;
+       indicator_values.indicator_link_id,
+       vw_indicators_link.indicator_group_id,
+       vw_indicators_link.indicator_group_name,
+       vw_indicators_link.indicator_id,
+       vw_indicators_link.indicator_name,
+       vw_indicators_link.indicator_name_rus,
+       vw_indicators_link.indicator_priority,
+       vw_indicators_link.indicator_type_id,
+       vw_indicators_link.indicator_type_name,
+       vw_indicators_link.indicator_type_priority,
+       vw_indicators_link.dimention_link_id,
+       vw_indicators_link.dimention_id,
+       vw_indicators_link.dimention_name,
+       vw_indicators_link.dimention_short_name,
+       vw_indicators_link.multiplier_id,
+       vw_indicators_link.multiplier_name,
+       vw_indicators_link.multiplier_multiplier,
+       vw_indicators_link.multiplier_description
+from indicator_values inner join vw_indicators_link on (indicator_values.indicator_link_id = vw_indicators_link.id) inner join
+     periods on (indicator_values.period_id = periods.id) inner join
+     enterprises on (indicator_values.ticker = enterprises.ticker);

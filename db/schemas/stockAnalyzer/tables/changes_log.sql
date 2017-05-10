@@ -1,8 +1,13 @@
 -- Create table
-create table SETTINGS
+create table CHANGES_LOG
 (
-  name  VARCHAR2(128) not null,
-  value VARCHAR2(1024) not null
+  id          NUMBER(8) not null,
+  table_name  VARCHAR2(30) not null,
+  column_name VARCHAR2(30) not null,
+  row_id      NUMBER(8) not null,
+  new_value   VARCHAR2(1024),
+  old_value   VARCHAR2(1024),
+  create_dtm  DATE default sysdate not null
 )
   pctfree 10
   initrans 1
@@ -14,11 +19,10 @@ create table SETTINGS
     minextents 1
     maxextents unlimited
     pctincrease 0
-    buffer_pool keep
   );
 -- Create/Recreate primary, unique and foreign key constraints 
-alter table SETTINGS
-  add constraint PK_SETTINGS primary key (NAME)
+alter table CHANGES_LOG
+  add constraint PK_CHANGES_LOG primary key (ID)
   using index 
   pctfree 10
   initrans 2

@@ -17,10 +17,11 @@ create table PERIODS
     minextents 1
     maxextents unlimited
     pctincrease 0
+    buffer_pool keep
   );
 -- Add comments to the columns 
 comment on column PERIODS.type
-  is 'Y=year,Q=quarter';
+  is 'Y=year,Q=quarter,L=last 12 month';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table PERIODS
   add constraint PK_PERIODS primary key (ID)
@@ -39,4 +40,4 @@ alter table PERIODS
 -- Create/Recreate check constraints 
 alter table PERIODS
   add constraint CHK_PERIODS
-  check ((TYPE='Y' or TYPE='Q'));
+  check ((TYPE='Y'or TYPE='Q' or TYPE='L'));

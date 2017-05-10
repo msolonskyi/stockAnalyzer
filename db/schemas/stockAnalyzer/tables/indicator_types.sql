@@ -3,7 +3,8 @@ create table INDICATOR_TYPES
 (
   id       NUMBER(8) not null,
   name     VARCHAR2(256) not null,
-  priority NUMBER(1) not null
+  priority NUMBER(1) not null,
+  name_rus VARCHAR2(256) not null
 )
   pctfree 10
   initrans 1
