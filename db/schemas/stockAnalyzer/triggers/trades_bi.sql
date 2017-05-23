@@ -8,5 +8,5 @@ begin
         into :new.ID
         From Dual;
     end if;
-end deals_bi;
+end trades_BI;
 /
