@@ -48,15 +48,17 @@ Begin
                 --
                 vt_trades_table := t_trades_table();
                 if ((sysdate - nvl(vt_ent_table(indx).db, pkg_const.sf_get_const_first_price_date())) >= 10) then
-                    vv_end_dtm := to_char(nvl(vt_ent_table(indx).db, pkg_const.sf_get_const_first_price_date()) + vn_days, 'ddmmyyyy');
+                    vv_end_dtm := to_char(nvl(vt_ent_table(indx).db, pkg_const.sf_get_const_first_price_date()) + vn_days, 'yyyymmdd');
                 else
-                    vv_end_dtm := to_char(sysdate, 'ddmmyyyy');
+                    vv_end_dtm := to_char(sysdate, 'yyyymmdd');
                 end if;
-                vv_value := 'http://mdata.ux.ua/qdata.aspx?code='||vt_ent_table(indx).ticker||'&'||'pb='||to_char(nvl(vt_ent_table(indx).db, pkg_const.sf_get_const_first_price_date()) + 1, 'ddmmyyyy')||'&'||'pe='||vv_end_dtm||'&'||'p=0'||'&'||'mk=1'||'&'||'ext=0'||'&'||'sep=2'||'&'||'div=2'||'&'||'df=5'||'&'||'tf=2'||'&'||'ih=0';
---                pkg_log.sp_log_message(vv_value, cv_module_name);
---                            'http://mdata.ux.ua/qdata.aspx?code=UNAF&pb=26062016&pe=27062016&p=1&mk=1&ext=1&sep=1&div=2&df=5&tf=2&ih=1'
+                vv_value := 'http://www.ux.ua/ru/marketdata/issueresults-csv.aspx?day1='||to_char(nvl(vt_ent_table(indx).db, pkg_const.sf_get_const_first_price_date()) + 1, 'yyyymmdd')||'&day2='||vv_end_dtm||'&iss='||vt_ent_table(indx).ticker||'&frmDataType=2';
+--                vv_value := 'http://mdata.ux.ua/qdata.aspx?code='||vt_ent_table(indx).ticker||'&'||'pb='||to_char(nvl(vt_ent_table(indx).db, pkg_const.sf_get_const_first_price_date()) + 1, 'ddmmyyyy')||'&'||'pe='||vv_end_dtm||'&'||'p=0'||'&'||'mk=1'||'&'||'ext=0'||'&'||'sep=2'||'&'||'div=2'||'&'||'df=5'||'&'||'tf=2'||'&'||'ih=0';
+--                'http://www.ux.ua/ru/marketdata/issueresults-csv.aspx?day1=20170606&day2=20170616&iss=BAVL&frmDataType=2'
                 vt_req := utl_http.begin_request(vv_value);
                 vt_resp := utl_http.get_response(vt_req);
+                -- first row for column names
+                utl_http.read_line(vt_resp, vv_value, true);
                 loop
                     utl_http.read_line(vt_resp, vv_value, true);
                     -- 4. insert into plsql table
@@ -65,11 +67,14 @@ Begin
                         exit;
                     else
                         va_arr := apex_util.string_to_table(vv_value, ',');
-                        vt_trades_table.extend;
-                        vt_trades_table(vt_trades_table.last).ticker := va_arr(1);
-                        vt_trades_table(vt_trades_table.last).dtm    := to_date(va_arr(3)||va_arr(4), 'yyyymmddhh24miss');
-                        vt_trades_table(vt_trades_table.last).price  := to_number(va_arr(5));
-                        vt_trades_table(vt_trades_table.last).vol    := va_arr(6);
+                        if (va_arr(6) in ('A', 'Q')) then
+                            vt_trades_table.extend;
+                            vt_trades_table(vt_trades_table.last).ticker := va_arr(1);
+--                            vt_trades_table(vt_trades_table.last).dtm    := to_date(va_arr(3)||va_arr(4), 'yyyymmddhh24miss');
+                            vt_trades_table(vt_trades_table.last).dtm    := to_date(va_arr(2), 'dd.mm.yyyy hh24:mi:ss');
+                            vt_trades_table(vt_trades_table.last).price  := to_number(replace(va_arr(3), '.', ','));
+                            vt_trades_table(vt_trades_table.last).vol    := va_arr(5);
+                        end if;
                     end if;
                 end loop;
                 utl_http.end_response(vt_resp);
